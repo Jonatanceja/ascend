@@ -1,0 +1,22 @@
+---
+const {
+  href = '',
+  type = 'button',
+  class: extraClass = '',
+} = Astro.props;
+
+const baseClasses = 'inline-flex items-center px-6 py-3 rounded-xl font-medium transition-colors';
+const primaryClasses = 'bg-slate-800 text-white hover:bg-slate-700';
+const classes = `${baseClasses} ${primaryClasses} ${extraClass}`;
+---
+
+{href ? (
+  <a href={href} class={classes}>
+    <slot /> <!-- 👈 Aquí es donde va el contenido dentro del botón -->
+  </a>
+) : (
+  <button type={type} class={classes}>
+    <slot />
+  </button>
+)}
+

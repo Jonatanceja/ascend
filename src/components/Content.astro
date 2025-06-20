@@ -1,0 +1,19 @@
+---
+import { Image } from 'astro:assets';
+import ingenieros from '../images/ingenieros.webp';
+---
+<section class="grid grid-cols-1 md:grid-cols-2 items-center max-w-6xl mx-auto px-5 py-10 relative gap-10 md:gap-20">
+    <div class="relative">
+        <img src="/halftone.svg" alt="Medio tono" class="absolute top-5 left-0 z-0">
+        <img src="/elipse3.svg" alt="elipse" class="absolute bottom-0 right-0 z-20">
+        <Image class:list={["w-full h-auto rounded-full relative z-10"]} src={ingenieros} loading="lazy" alt="Ingenieros" />
+    </div>
+    <div class="space-y-5">
+        <h5>Cursos dirigidos según la profesión</h5>
+        <p>
+            Nos enfocamos en las necesidades específicas de nuestros clientes para ofrecer una formación superior, 
+            diseñada a medida para cada profesión. Contamos con cursos para preparar a futuros CEOs, traders, abogados, 
+            profesionales de ventas, contadores, profesionales de la salud y más.
+        </p>
+    </div>
+</section>

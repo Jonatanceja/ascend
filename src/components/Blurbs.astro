@@ -1,0 +1,36 @@
+---
+const cards = [
+  {
+    icon: '/flexibilidad.svg',
+    title: 'Flexibilidad',
+    text: 'Adaptamos los horarios y la intensidad de los cursos a tus necesidades.'
+  },
+  {
+    icon: '/preparacion.svg',
+    title: 'Preparación',
+    text: 'Nuestros profesores certificados te guiarán en cada paso.'
+  },
+  {
+    icon: '/resultados.svg',
+    title: 'Resultados',
+    text: 'Aumenta tu confianza y habilidades comunicativas en inglés.'
+  },
+  {
+    icon: '/materiales.svg',
+    title: 'Materiales',
+    text: 'Utilizamos los programas más innovadores de Pearson y Cengage.'
+  },
+];
+---
+
+<section class="grid gap-5 sm:grid-cols-2 md:grid-cols-4 max-w-6xl mx-auto px-5 py-10 relative">
+    <img src="/halftone.svg" alt="Medio tono" class="absolute bottom-4 -left-16 z-0">
+    <img src="/elipse2.svg" alt="elipse" class="absolute top-14 -right-16 z-0">
+  {cards.map(card => (
+    <figure class="bg-white shadow-xl rounded-2xl p-6 text-center relative z-10">
+      <img src={card.icon} alt={card.title} class="h-14 mx-auto mb-4" />
+      <h3 class="text-xl font-semibold mb-2">{card.title}</h3>
+      <p class="text-gray-600">{card.text}</p>
+    </figure>
+  ))}
+</section>

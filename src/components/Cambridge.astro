@@ -1,0 +1,17 @@
+---
+import { Image } from 'astro:assets';
+import cambridge from '../images/cambridge_1.webp';
+import MainButton from '../components/ui/MainButton.astro';
+---
+<section class="grid grid-cols-1 md:grid-cols-2 items-center max-w-6xl mx-auto px-5 py-10 relative gap-10 md:gap-20">
+    <div class="relative">
+        <Image class:list={["w-full h-auto rounded-full relative z-10"]} src={cambridge} loading="lazy" alt="Ingenieros" />
+    </div>
+    <div class="space-y-5 text-center md:text-left">
+        <h5>Somos un centro examinador Cambridge</h5>
+        <p class="text-lg">Acércate a nosotros para más información.</p>
+        <div>
+            <MainButton href="/contacto">Contáctanos</MainButton>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,15 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Cover from '../components/ui/Cover.astro';
+import About from '../components/About.astro';
+import heroImage from '../images/ejecutiva-con dominio-del-ingles.webp';
+---
+
+<Layout>
+    <Cover
+      title='Mejoramos la <span class="text-red-600">comunicación global</span> en tu propia empresa'
+      image={heroImage}
+      imageAlt="Hombre de negocios aprendiendo inglés"
+    />
+    <About />
+</Layout>
