@@ -1,0 +1,52 @@
+---
+const testimonials = [
+  {
+    testimonial: 'Puedo dar fe de los resultados altamente efectivos que me ha brindado ASCEND, tanto para entablar conversaciones con cualquier persona como para hacer negocios en mi ámbito profesional, lo que derivó en una mejora de ingresos para mí. My business expectations are unlimited now! 😃✈️🏝📊🥂',
+    name: 'Raúl Brenis',
+  },
+  {
+    testimonial: '100% recomendable! excelentes maestros.',
+    name: 'Mía Cöral Anvi',
+  },
+];
+---
+<div class="px-5">
+    <section class="max-w-4xl mx-auto px-5 py-10 relative mt-10 md:mt-32 mb-10 md:mb-20 rounded-2xl bg-white shadow-xl">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            {testimonials.map(testimonial => (
+                <div class="md:p-10 py-10 text-center relative z-10 swiper-slide space-y-5">
+                    <div>
+                        <svg class="w-10 h-10 mx-auto text-slate-400" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path fill="none" d="M0 0h24v24H0z"></path> <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"></path> </g> </g></svg>
+                    </div>
+                    <p class="text-gray-600 px-5">{testimonial.testimonial}</p>
+                    <div class="font-semibold text-slate-800">{testimonial.name}</div>
+                    <img src="/blockquote2.svg" alt="Blockquote">
+                </div>
+            ))}
+          </div>
+        
+          <!-- Controles -->
+          <div class="swiper-pagination"></div>
+        </div>
+    </section>
+</div>
+
+
+<script>
+  import Swiper from 'swiper';
+  import { Navigation, Pagination } from 'swiper/modules';
+
+  new Swiper('.swiper', {
+    modules: [Navigation, Pagination],
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+</script>

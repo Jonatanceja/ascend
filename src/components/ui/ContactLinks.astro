@@ -1,0 +1,32 @@
+---
+const {
+  type = 'phone', // opciones: phone, email, whatsapp, address
+  icon = '/telefono.svg',
+  label = '',
+  value = '',
+} = Astro.props;
+
+let href = '#';
+
+if (type === 'phone') {
+  href = `tel:${value.replace(/\s+/g, '')}`;
+} else if (type === 'email') {
+  href = `mailto:${value}`;
+} else if (type === 'whatsapp') {
+  const clean = value.replace(/\D+/g, '');
+  href = `https://wa.me/${clean}`;
+} else if (type === 'address') {
+  href = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(value)}`;
+}
+---
+
+<div class="flex items-center gap-5">
+  <img class="h-10 bg-slate-800 p-2 rounded-full" src={icon} alt={label} />
+  {type === 'address' ? (
+    <span class="font-bold text-lg">{value}</span>
+  ) : (
+    <a class="font-bold text-lg hover:underline" href={href} target={type === 'address' ? '_blank' : undefined} rel="noopener">
+      {value}
+    </a>
+  )}
+</div>

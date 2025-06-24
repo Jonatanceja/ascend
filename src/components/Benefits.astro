@@ -1,0 +1,62 @@
+---
+const benefits = [
+    {
+        title: 'Aumenta la productividad',
+        description: 'Mejora la comunicación interna y externa de tu empresa.',
+    },
+    {
+        title: 'Mejora la imagen de tu empresa',
+        description: 'Demuestra tu compromiso con la excelencia.',
+    },
+    {
+        title: 'Fomenta el crecimiento profesional',
+        description: 'Ayuda a tus empleados a desarrollar nuevas habilidades.',
+    },
+    {
+        title: 'Atrae a nuevos clientes',
+        description: 'Una buena comunicación en inglés abre puertas a nuevos mercados.',
+    },
+]
+---
+
+<section class=" max-w-6xl mx-auto px-5 py-10 relative">
+    <img src="/halftone.svg" alt="Medio tono" class="absolute top-5 -right-16 z-0">
+    <img src="/elipse3.svg" alt="elipse" class="absolute -bottom-5 -left-16 z-0">
+    <div class="px-6 py-10 md:p-20 bg-gradient-to-r from-red-800 to-slate-800 rounded-4xl space-y-5 relative z-10">
+        <h4 class="text-center">Beneficios para las empresas</h4>
+        <div class="text-center text-white text-lg">
+            Aprender inglés ofrece grandes beneficios a las empresas, ya que mejora la comunicación interna y externa, facilitando la interacción con clientes y socios internacionales
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 pt-5 gap-10 md:gap-0">
+  {benefits.map((benefit, index) => {
+    // Condiciones para agregar bordes solo en escritorio (md)
+    let borderClass = '';
+
+    if (index === 0) {
+      borderClass = 'md:border-r md:border-b';
+    } else if (index === 1) {
+      borderClass = 'md:border-b';
+    } else if (index === 2) {
+      borderClass = 'md:border-r';
+    }
+    // index === 3 → sin borde
+
+    return (
+      <div class={`space-y-5 flex items-start gap-3 p-1 md:p-5 ${borderClass} border-red-200`}>
+        <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 12.6111L8.92308 17.5L20 6.5" stroke="#ffffff"
+                stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg>
+        <div class="space-y-5">
+          <div class="text-2xl font-semibold text-white">{benefit.title}</div>
+          <div class="text-white">{benefit.description}</div>
+        </div>
+      </div>
+    );
+  })}
+</div>
+    </div>
+
+</section>

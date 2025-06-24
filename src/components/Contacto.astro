@@ -1,0 +1,20 @@
+---
+import { Image } from 'astro:assets';
+import heroImage from '../images/contacto.webp';
+---
+
+<section class="max-w-6xl mx-auto px-5 py-10 relative z-10">
+        <div class="relative max-w-4xl mx-auto">
+            <Image class:list={["mx-auto pt-10 relative z-10"]} src={heroImage} loading="lazy" alt="Comunicación efectiva" />
+            <img src="/halftone.svg" alt="Medio tono" class="absolute bottom-10 right-0 z-0">
+        <img src="/elipse3.svg" alt="elipse" class="absolute bottom-56 left-5 z-0">
+        </div>
+        <div class="px-6 py-10 md:p-20 bg-white shadow-xl rounded-4xl space-y-5 relative z-10">
+            <h2 class="text-center">¡Solicita una cotización personalizada para nuestros cursos de inglés empresarial hoy mismo!</h2>
+            <p class="text-center">
+                Nos adaptamos a las necesidades de tu empresa y diseñamos programas que impulsarán el desarrollo de tus empleados. Contáctanos para recibir una propuesta hecha a medida, pensada para cumplir con tus objetivos y mejorar el rendimiento de tu equipo. ¡Estamos listos para ayudarte a alcanzar el éxito global!
+            </p>
+        </div>
+        <img src="/halftone.svg" alt="Medio tono" class="absolute bottom-32 -left-16 z-0">
+        <img src="/elipse3.svg" alt="elipse" class="absolute -bottom-5 -right-16 z-0">
+</section>

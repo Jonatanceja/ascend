@@ -1,9 +1,17 @@
 @import "tailwindcss";
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
 
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
 }
 
 p {
@@ -42,4 +50,8 @@ p {
 
 .item {
     @apply text-slate-800;
+}
+
+.swiper-pagination-bullet-active {
+    background: #1c283d !important;
 }

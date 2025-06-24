@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Cover from '../components/ui/Cover.astro';
+import Text from '../components/Text.astro';
+import Items from '../components/Items.astro';
+import Benefits from '../components/Benefits.astro';
+import Programs from '../components/Programs.astro';
+import heroImage from '../images/aprendizaje.webp';
+---
+
+<Layout title="Nosotros">
+    <Cover
+      title='Una experiencia de <span class="text-red-600">aprendizaje</span> personalizada'
+      image={heroImage}
+      imageAlt="Hombre de negocios aprendiendo inglés"
+    />
+    <Text />
+    <Items />
+    <Benefits />
+    <Programs />
+</Layout>

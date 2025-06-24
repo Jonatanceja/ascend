@@ -1,0 +1,34 @@
+---
+const courses = [
+  {
+    image: '/ingles-general.webp',
+    title: 'Inglés general',
+    text: 'Desarrolla habilidades comunicativas en inglés para diversas situaciones profesionales.'
+  },
+  {
+    image: '/ingles-negocios.webp',
+    title: 'Inglés para negocios',
+    text: 'Aprende el vocabulario y las expresiones específicas para tu sector.'
+  },
+  {
+    image: '/preparacion-examenes.webp',
+    title: 'Preparación para exámenes',
+    text: 'Prepárate para los exámenes TOEFL, ISE, Cambridge y TKT.'
+  },
+  {
+    image: '/cursos-medida.webp',
+    title: 'Cursos a medida',
+    text: 'Diseñamos cursos personalizados según tus necesidades y objetivos.'
+  },
+];
+---
+
+<section class="grid grid-cols-1 md:grid-cols-4 max-w-6xl mx-auto px-5 py-10 relative gap-10 md:gap-10">
+    {courses.map(course => (
+        <div class="text-center relative z-10 space-y-5">
+            <img class="mx-auto" src={course.image} alt="flexibilidad">
+            <h3 class="text-xl font-semibold mb-2">{course.title}</h3>
+            <p>{course.text}</p>
+        </div>
+    ))}
+</section>
